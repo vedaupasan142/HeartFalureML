@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>IBM Watson Machine Learning Heart Risk Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Watson Natural Language Classifier for E-mail Spam" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <!--<link href="stylesheets/watson-bootstrap-dark.css" rel="stylesheet">-->
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+
+    <body>
+
+        <div class="container">
+            <div class="row header">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1></h1>
+                            <small>By Anand</small>
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            Use <a target="_blank" href="https://www.ibm.com/cloud/machine-learning/">Watson Machine Learning</a> to predict heart risk. Enter information below and see how it is classified.
+                        </p>
+    
+                        <p>
+
+                            <a target="_blank" href="https://www.ibm.com/cloud/machine-learning/"> WML Product Page </a> |
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <form id="form" role="form">
+                            <div class="input-group classifier-input-form">
+                                <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <label for="age">Age</label>
+                                            <input id="age" class="form-control input-lg" placeholder="Enter age" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="sex">Sex</label>
+                                            <select id="sex" class="form-control input-lg" placeholder="Enter sex" type="text" autofocus required>
+                                                <option value="1">1</option>
+                                                <option value="0">0</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="cp">cp</label>
+                                            <select id="cp" class="form-control input-lg" placeholder="Enter cp type" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="fbs">fbs</label>
+                                            <select id="fbs" class="form-control input-lg" placeholder="Enter fbs" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="restecg">restecg</label>
+                                            <select id="restecg" class="form-control input-lg" placeholder="Enter restecg" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="exang">exang</label>
+                                            <select id="exang" class="form-control input-lg" placeholder="Enter exang" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <label for="chol">Cholesterol</label>
+                                            <input id="chol" class="form-control input-lg" placeholder="Enter chol" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="thalach">thalach</label>
+                                            <input id="thalach" class="form-control input-lg" placeholder="Enter thalach" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="trestbps">trestbps</label>
+                                            <input id="trestbps" class="form-control input-lg" placeholder="Enter trestbps" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="oldpeak">oldpeak</label>
+                                            <input id="oldpeak" class="form-control input-lg" placeholder="Enter oldpeak" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="slope">slope</label>
+                                            <select id="slope" class="form-control input-lg" placeholder="Enter slope" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="ca">ca</label>
+                                            <select id="ca" class="form-control input-lg" placeholder="Enter ca" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="thal">thal</label>
+                                            <select id="thal" class="form-control input-lg" placeholder="Enter thal" type="text" autofocus required>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+
+                                        
+                                    </td>
+                                </tr>
+                                </table>
+                            <div>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg classify-btn" type="submit">Classify
+                                        <i class="loading fa fa-spinner fa-spin"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row answers">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <h1 class="answer"></h1>
+                        <p class="risk"></p>
+                        <p class="prediction"></p>
+                        <p class="probability"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="javascripts/index.js"></script>
+    </body>
