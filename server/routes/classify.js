@@ -46,15 +46,20 @@ function classify(req, res) {
 
     let values;
     const fields = ["AVGHEARTBEATSPERMIN","PALPITATIONSPERDAY","CHOLESTEROL","BMI","AGE","SEX","FAMILYHISTORY","SMOKERLAST5YRS","EXERCISEMINPERWEEK"]
-    values = [[req.body.heartbeats,
-               req.body.palpitations,
-               req.body.cholesterol,
-               req.body.bmi,
-               req.body.age,
-               req.body.gender,
-               req.body.familyhistory,
-               req.body.smoker,
-               req.body.exercise]]
+    values = [[req.body.age,
+               req.body.sex,
+               req.body.cp,
+               req.body.trestbps,
+               req.body.chol,
+               req.body.fbs,
+               req.body.restecg,
+               req.body.thalach,
+               req.body.exang,
+               req.body.oldpeak,
+               req.body.slope,
+               req.body.ca,
+               rreq.body.thal         
+              ]]
     let payload_json = {"input_data": [{"fields": fields, "values": values}]}
     let payload = JSON.stringify(payload_json);
 
@@ -76,6 +81,21 @@ function classify(req, res) {
       res.json({errors: [{message: error}]})
     });
   });
+
+  /*   $('#age').val('40');
+  $('#sex').val('1');
+  $('#cp').val('0');
+  $('#trestbps').val('125');
+  $('#chol').val('220');
+  $('#fbs').val('0');
+  $('#restecg').val('1');
+  $('#thalach').val('144');
+  $('#exang').val('0');
+  $('#oldpeak').val('0.4');
+  $('#slope').val('1');
+  $('#ca').val('4');
+  $('#thal').val('3');
+  */
 
 }
 
