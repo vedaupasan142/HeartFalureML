@@ -62,13 +62,13 @@
         if (parsedResponse.errors) {
             $('.answer').html('Something went wrong :-( ' + parsedResponse.errors[0].message);
         } else {
-            var data = parsedResponse.predictions[0].values[0]
-            var risk = data[0]
-            var prediction = data[1][0]
-            var probability = data[1][1]
-            $('.risk').html('Heart Risk: '+risk);
-            $('.prediction').html('Prediction: '+Math.floor(prediction*100 ).toFixed(0)+'%');
-            $('.probability').html('Probability: '+Math.floor(probability*100 ).toFixed(0)+'%');
+             data = parsedResponse.predictions[0].values[0]
+            //var risk = data[0]
+           // var prediction = data[1][0]
+            //var probability = data[1][1]
+            $('.risk').html('Data: '+data);
+            $('.prediction').html('Prediction: '+Math.floor(data)+'%');
+            $('.probability').html('Probability: '+Math.floor(data)+'%');
         }
 
         $('.classify-btn').prop('disabled', false);
