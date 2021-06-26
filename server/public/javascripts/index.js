@@ -67,8 +67,8 @@
            // var prediction = data[1][0]
             //var probability = data[1][1]
             $('.risk').html('Data: '+data);
-            $('.prediction').html('Prediction: '+Math.floor(data)+'%');
-            $('.probability').html('Probability: '+Math.floor(data)+'%');
+            $('.prediction').html('Prediction: '+data);
+            $('.probability').html('Probability: '+data);
         }
 
         $('.classify-btn').prop('disabled', false);
